@@ -1,0 +1,8 @@
+(jbuild_version 1)
+
+;; This declare the hello_world executable implemented by hello_world.ml
+(executable
+ ((name modcaml)
+  (modes (native))
+  (targets (object executable)))
+ )

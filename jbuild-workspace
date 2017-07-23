@@ -1,0 +1,5 @@
+(context
+ ((name ios+amd64)
+  (switch cross-ios-amd64)
+  (host ios)
+  ))
