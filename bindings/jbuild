@@ -1,0 +1,8 @@
+(jbuild_version 1)
+
+(rule
+ ((targets (bindings.o))
+  (deps    (bindings.c))
+  (action  (bash "\
+    ${OCAMLOPT} -c ${<};\
+    "))))

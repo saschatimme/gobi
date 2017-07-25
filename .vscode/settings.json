@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.m": "matlab",
+        "callback.h": "c",
+        "mlvalues.h": "c",
+        "string.h": "c",
+        "stddef.h": "c",
+        "misc.h": "c",
+        "_null.h": "c"
+    }
+}

@@ -1,5 +1,17 @@
 (context
- ((name ios+amd64)
-  (switch cross-ios-amd64)
+ ((name 4.04.0+ios+arm64)
+  (switch 4.04.0+ios+arm64)
   (host ios)
+  (merlin)
+  ))
+
+(context
+ ((name 4.04.0+ios+amd64)
+  (switch 4.04.0+ios+amd64)
+  (host ios)
+  ))
+
+(context
+ ((name 4.04.0)
+  (switch 4.04.0)
   ))

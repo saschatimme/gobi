@@ -1,0 +1,16 @@
+(jbuild_version 1)
+
+(executable
+ ((name hello_world)
+  (modes (native))
+  (targets (object executable))
+  (libraries (re re.perl))))
+
+
+(rule
+ ((targets (libgobi.a))
+  (deps    (hello_world.exe.o ../bindings/bindings.o))
+  (action  (bash "\
+    cp ${ocaml_where}/libasmrun.a libgobi.a && chmod +w libgobi.a;\
+    ar r libgobi.a hello_world.exe.o ../bindings/bindings.o;\
+    "))))
