@@ -4,7 +4,8 @@ Gobi
 A boilerplate based on [JBuilder](http://jbuilder.readthedocs.io/en/latest/) and [opam-cross-ios](https://github.com/whitequark/opam-cross-ios) for creating static iOS libraries with OCaml and Reason.
 
 The name comes from the Gobi Desert, which is the [only desert with wild
-camels](http://animals.nationalgeographic.com/animals/mammals/bactrian-camel/).
+camels](http://animals.nationalgeographic.com/animals/mammals/bactrian-camel/) (Thank you to [wokalski](https://github.com/wokalski) to let me take over this awesome name :))
+
 
 Getting started
 ------------
@@ -74,5 +75,3 @@ The OCaml cross-compiler in opam-cross-ios is based on a [patchset][psellos] by 
 [psellos]: psellos.com/ocaml/compile-to-iphone.html
 
 [JBuilder](http://jbuilder.readthedocs.io/en/latest/) is built by the fine folks at Jane Street
-
-Thank you to [wokalski](https://github.com/wokalski) to let me take over this awesome name :)
