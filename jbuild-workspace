@@ -10,8 +10,3 @@
   (switch 4.04.0+ios+amd64)
   (host ios)
   ))
-
-(context
- ((name 4.04.0)
-  (switch 4.04.0)
-  ))

@@ -119,7 +119,7 @@ gobi_setup() {
 }
 
 gobi_create_library() {
-  ../jbuilder/_build/default/bin/main.exe build ${SRC}/lib${LIB_NAME}.a --verbose
+  jbuilder build ${SRC}/lib${LIB_NAME}.a
   if [ "$BIT_32" = false ] ; then
     lipo -create \
       _build/${SIM_64}/${SRC}/lib${LIB_NAME}.a \

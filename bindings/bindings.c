@@ -45,3 +45,9 @@ char * match_string(char * pattern, char * string)
 
   CAMLreturnT(char *, String_val(ores));
 }
+
+void ocaml_init(void)
+{
+  char *arg = NULL;
+  caml_main(&arg);
+}
