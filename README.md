@@ -1,8 +1,13 @@
-# Gobi
+Gobi
+==============
 
 A boilerplate based on [JBuilder](http://jbuilder.readthedocs.io/en/latest/) and [opam-cross-ios](https://github.com/whitequark/opam-cross-ios) for creating static iOS libraries with OCaml and Reason.
 
-## Getting started
+The name comes from the Gobi Desert, which is the [only desert with wild
+camels](http://animals.nationalgeographic.com/animals/mammals/bactrian-camel/).
+
+Getting started
+------------
 
 **Requirement**: You must have [OPAM](https://opam.ocaml.org/doc/Install.html) installed.
 1. Clone this repo.
@@ -14,7 +19,8 @@ A boilerplate based on [JBuilder](http://jbuilder.readthedocs.io/en/latest/) and
 7. Open the CrossIOSTest project and run it :)
 
 
-## Details
+Details
+-------------
 Okay here a lot of things going on and I try to explain the different parts.
 Generally, any native iOS library would have to be compiled four times: for 64-bit (and 32-bit) device and simulator. OPAM offers no help here; due to the way OPAM packages currently work, the only realistic option is to create four switches, one switch per target, and build everything four times
 
@@ -58,3 +64,15 @@ The `jbuild` file in `src` has the following rule
     "))))
 ```
 This rule combines our OCaml code `hello_world.exe.o` and our bindings `../bindings/bindings.o` together with the ocaml (`libasmrun.a`) runtime to a static archive.
+
+
+Acknowledgements
+-------------------
+Opam-cross-ios is based on the work by [whitequark](https://whitequark.org).
+The OCaml cross-compiler in opam-cross-ios is based on a [patchset][psellos] by Gerd Stolpmann.
+
+[psellos]: psellos.com/ocaml/compile-to-iphone.html
+
+[JBuilder](http://jbuilder.readthedocs.io/en/latest/) is built by the fine folks at Jane Street
+
+Thank you to [wokalski](https://github.com/wokalski) to let me take over this awesome name :)
