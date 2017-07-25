@@ -114,7 +114,7 @@ gobi_setup() {
   echo "Install dev dependencies on ${WORKING_SWITCH}"
   opam switch -y --no-warning $WORKING_SWITCH
   eval $(opam config env --switch=$WORKING_SWITCH)
-  opam pin add jbuilder git://github.com/saschatimme/jbuilder.git#output-obj+cross
+  opam pin add jbuilder git://github.com/saschatimme/jbuilder.git#output-object+cross-compilation
   opam install jbuilder merlin
 }
 

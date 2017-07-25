@@ -1,8 +1,0 @@
-B ../_build/4.04.0+ios+arm64/src
-B /Users/sascha/.opam/4.04.0+ios+arm64/ios-sysroot/lib/bytes
-B /Users/sascha/.opam/4.04.0+ios+arm64/ios-sysroot/lib/re
-B /Users/sascha/.opam/4.04.0+ios+arm64/ios-sysroot/lib/re.perl
-FLG -w -40
-S /Users/sascha/.opam/4.04.0+ios+arm64/ios-sysroot/lib/bytes
-S /Users/sascha/.opam/4.04.0+ios+arm64/ios-sysroot/lib/re
-S /Users/sascha/.opam/4.04.0+ios+arm64/ios-sysroot/lib/re.perl
