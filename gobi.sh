@@ -34,7 +34,7 @@ gobi_create_switches() {
   fi
   echo "Generate switch ${DEV_64} alias of ${IOSCAMLVER}"
   opam switch -y ${DEV_64} --alias-of ${IOSCAMLVER} --no-warning
-  echo "Generate switch4${SIM_64}+ios+amd64 (iOS Simulator) alias of ${IOSCAMLVER}"
+  echo "Generate switch ${SIM_64}+ios+amd64 (iOS Simulator) alias of ${IOSCAMLVER}"
   opam switch -y ${SIM_64} --alias-of ${IOSCAMLVER} --no-warning
 
   gobi_working_switch
@@ -55,7 +55,6 @@ gobi_foreach() {
     eval $(opam config env --switch=$i)
     if ! OPAMYES=1 $*; then return 1; fi
   done
-  echo "Done."
   echo "Done. Switch back to ${WORKING_SWITCH}"
   gobi_working_switch
 }
@@ -83,7 +82,7 @@ _gobi_configure_switch() {
 }
 
 gobi_configure_switches() {
-  gobi_foreach _gobi_configure_switch
+  SDK=${SDK} VER=${MIN_VER} gobi_foreach _gobi_configure_switch
 }
 
 gobi_install() {
@@ -105,17 +104,17 @@ gobi_setup() {
   gobi_configure_switches
   echo "Install Ocamlbuild and OCamlfind"
   gobi_install ocamlbuild ocamlfind
-
   if [ "$REASON" = true ] ; then
     echo "Install support for Reason."
     gobi_install reason
   fi
-
+  echo "Install ocaml-ios"
+  gobi_install ocaml-ios
   echo "Install dev dependencies on ${WORKING_SWITCH}"
   opam switch -y --no-warning $WORKING_SWITCH
   eval $(opam config env --switch=$WORKING_SWITCH)
-  opam pin add jbuilder git://github.com/saschatimme/jbuilder.git#output-object+cross-compilation
-  opam install jbuilder merlin
+  opam pin add -y jbuilder git://github.com/saschatimme/jbuilder.git#output-object+cross-compilation
+  opam install -y jbuilder merlin
 }
 
 gobi_create_library() {
