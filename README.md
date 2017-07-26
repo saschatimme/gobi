@@ -19,6 +19,7 @@ Getting started
 6. Create the static library with `gobi_create_library`
 7. Open the CrossIOSTest project and run it :)
 
+**Note**: The install for `reason` seems to fail undeterministically. If it happens just try again with `gobi_install reason`.
 
 Details
 -------------
