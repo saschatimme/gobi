@@ -106,6 +106,7 @@ gobi_setup() {
   gobi_install ocamlbuild ocamlfind
   if [ "$REASON" = true ] ; then
     echo "Install support for Reason."
+    gobi_foreach opam pin add reason 1.13.6 -y
     gobi_install reason
   fi
   echo "Install ocaml-ios"
