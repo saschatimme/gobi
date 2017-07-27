@@ -10,7 +10,10 @@ camels](http://animals.nationalgeographic.com/animals/mammals/bactrian-camel/) (
 Getting started
 ------------
 
-**Requirement**: You must have [OPAM](https://opam.ocaml.org/doc/Install.html) installed.
+**Requirements**:
+* You must have [OPAM](https://opam.ocaml.org/doc/Install.html) installed.
+* You must have the Xcode command line tools installed (e.g. with `xcode-select --install`)
+
 1. Clone this repo.
 2. There is a script `gobi.sh` in the root of this project. Checkout the variables at the top of the script and see if you have to adapt them for your needs.
 3. Source the bash script `gobi.sh` (e.g. with `source gobi.sh`)
